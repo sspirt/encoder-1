@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru-BY" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Шифратор текста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Шифратор текста</h1>
+    </header>
+    <main>
+        <div class="form-group">
+            <label for="selectEncoder">Алгоритм шифрования</label><br>
+            <select id="selectEncoder">
+                <option value="columnar">Столбцовый метод (английский язык)</option>
+                <option value="vigenere">Алгоритм Виженера, прогрессивный ключ (русский язык)</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="keyInput">Ключевое слово</label><br>
+            <input type="text" id="keyInput" placeholder="Введите ключ..."><br>
+        </div>
+        <div class="form-group">
+            <label for="originalText">Исходный текст</label><br>
+            <textarea id="originalText" rows="6" cols="60" placeholder="Введите текст или загрузите файл..."></textarea>
+        </div>
+        <div class="btn-group">
+            <button id="btnEncrypt">Зашифровать</button>
+            <button id="btnDecrypt">Дешифровать</button>
+            <button id="btnOpen">Открыть файл</button>
+            <input type="file" id="fileInput" accept=".txt" style="display:none">
+        </div>
+        <div class="form-group">
+            <label for="resultText">Результат</label><br>
+            <textarea id="resultText" rows="6" cols="60" readonly placeholder="Здесь появится результат..."></textarea>
+        </div>
+        <div class="btn-group">
+            <button id="btnSave">Сохранить в файл</button>
+        </div>
+    </main>
+    <div id="toast"></div>
+    <script src="index.js"></script>
+</body>
+</html>

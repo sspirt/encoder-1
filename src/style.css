@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    padding: 32px 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+select, input[type="text"], textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus, input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+textarea[readonly] {
+    background: #f9f9f9;
+    color: #555;
+    cursor: default;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.1s;
+}
+
+button:hover  {
+    filter: brightness(0.92);
+}
+
+button:active {
+    filter: brightness(0.82);
+    transform: scale(0.98);
+}
+
+#btnEncrypt {
+    background: #3498db;
+    color: #fff;
+}
+
+#btnDecrypt {
+    background: #27ae60;
+    color: #fff;
+}
+#btnOpen {
+    background: #7f8c8d;
+    color: #fff;
+}
+
+#btnSave {
+    background: #e67e22;
+    color: #fff;
+}
+
+#toast {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#toast.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
